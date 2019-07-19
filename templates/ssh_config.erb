@@ -1,0 +1,9 @@
+  Host *
+    ForwardAgent no
+    Port 22
+<% @hosts.each do |host| %>
+  Host <%= host[:name] %>
+    hostname <%= host[:hostname] %>
+    user <%= host[:user] %>
+    identityfile <%= host[:identityfile] %>
+<% end %>
